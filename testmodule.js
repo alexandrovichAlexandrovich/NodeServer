@@ -1,0 +1,1 @@
+exports.getData = function() { return "Test module works!"; };
