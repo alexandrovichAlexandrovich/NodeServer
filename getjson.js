@@ -5,8 +5,9 @@ var file = {
         'a':'1',
         'b':'2'
     }
-}.stringify();
+};
 
 exports.get = function(){
-    return file;
-}
+    return JSON.stringify(file);
+};
+

@@ -33,8 +33,8 @@ function Point(i, j){
     this.x = i;
     this.y = j;
 
-    this.px = x * 50;
-    this.py = y * 50;
+    this.px = this.x * 50;
+    this.py = this.y * 50;
 }
 
 const pt = new Point(2,3);
@@ -62,7 +62,7 @@ function step1(str) {
         console.log("Step 1 start"+str);
         var x = 3;
         var does = setInterval(function () {
-            if(x == 0){
+            if(x === 0){
                 clearInterval(this);
                 finalizeStep1();
                 resolve(str);
