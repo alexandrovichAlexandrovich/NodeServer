@@ -35,6 +35,7 @@ function Point(i, j){
 
     this.px = x * 50;
     this.py = y * 50;
+    var c = 0;
 }
 
 const pt = new Point(2,3);
