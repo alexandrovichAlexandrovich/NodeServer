@@ -21,7 +21,7 @@ app.get('/api', (req, res) => {
     res.send(json.file);
 });
 
-app.get('/api/games', (req, res) => {
+app.get('/api/games/home', (req, res) => {
     res.status(200);
     res.send('games here!')
     res.end();
