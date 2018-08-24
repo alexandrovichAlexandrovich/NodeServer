@@ -1,0 +1,44 @@
+/teams/move PATCH: GameId, PlayerId, UnitId, Position
+/teams GET: GameId, PlayerId
+
+/games GET: GameId
+
+
+Document Schemas:
+
+db.Games:
+{
+    GameId*
+    Player1Id
+    Player2Id
+    Map
+}
+
+db.Teams:
+{
+    PlayerId*
+    GameId*
+    Units: [
+        {
+            UnitId
+            Inventory: [
+                {
+                    ItemId,
+                    Uses
+                }, ...
+            ]
+            HP
+            Dead
+            Moved
+            Position: [x, y]
+            Class
+        }, ...
+    ]
+}
+
+db.Players
+{
+    PlayerId*
+    Games: [GameId, GameId, ...]
+    Rosters: [RosterId, RosterId, ...]
+}
